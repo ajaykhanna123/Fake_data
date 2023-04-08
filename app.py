@@ -6,7 +6,7 @@ import read_file_from_blob_storage
 def hello():
     return "Hello, World!"
 
-@app.route("read_file/")
+@app.route("/read_file/")
 def read_file():
     read_file_obj=read_file_from_blob_storage.Read_initial_csv_file()
     df_str=read_file_obj.read_file()
