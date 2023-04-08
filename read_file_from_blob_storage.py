@@ -16,7 +16,7 @@ class Read_initial_csv_file:
         self.connect_str = 'DefaultEndpointsProtocol=https;AccountName=demoexlflask;AccountKey=qwlSm7yaOCUS04PQjJpuosG+1InVQ1sgKLXZaRjDc6T/vK/m3/Tzi3soglKm5ngJJD7+2neSnO8V+AStNWbmDw==;EndpointSuffix=core.windows.net'
 
 
-    def read_file(self):
+    def read_file(self,blob_folder="input_files/"):
 
         print(self.connect_str)
         blob_service_client = BlobServiceClient.from_connection_string(self.connect_str)
@@ -26,7 +26,7 @@ class Read_initial_csv_file:
 
         # get a list of all blob files in the container
         blob_list = []
-        for blob_i in container_client.list_blobs("input_files/"):
+        for blob_i in container_client.list_blobs(blob_folder):
             blob_list.append(blob_i.name)
         blob_i=blob_list[0]
 
