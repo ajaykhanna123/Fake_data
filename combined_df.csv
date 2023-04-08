@@ -1,0 +1,11 @@
+transaction_id,session_id,timestamp,amount,cancelled,user_id,device,os,minutes,country,gender,age
+0,0,2019-01-01 12:34:32,100.0,False,0,mobile,android,23,US,M,34
+1,1,2019-01-01 12:42:21,55.3,False,1,tablet,ios,12,UK,F,23
+2,2,2019-01-07 17:23:11,79.5,False,2,tablet,android,8,ES,,44
+3,3,2019-01-10 11:08:57,112.1,True,3,mobile,android,13,UK,M,22
+4,4,2019-01-10 21:54:08,110.0,True,4,mobile,ios,9,US,F,54
+5,5,2019-01-11 11:21:20,76.3,False,5,mobile,android,32,DE,M,57
+6,6,2019-01-22 14:44:10,89.5,False,6,mobile,ios,7,BG,F,45
+7,7,2019-01-23 10:14:09,132.1,True,7,tablet,ios,21,ES,,41
+8,8,2019-01-27 16:09:17,68.0,False,8,mobile,ios,29,FR,F,23
+9,9,2019-01-29 12:10:48,99.9,False,9,tablet,ios,34,UK,,30

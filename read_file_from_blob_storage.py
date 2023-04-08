@@ -26,7 +26,7 @@ class Read_initial_csv_file:
 
         # get a list of all blob files in the container
         blob_list = []
-        for blob_i in container_client.list_blobs():
+        for blob_i in container_client.list_blobs("input_files/"):
             blob_list.append(blob_i.name)
         blob_i=blob_list[0]
 
