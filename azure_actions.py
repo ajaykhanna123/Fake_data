@@ -5,7 +5,8 @@ from io import StringIO
 import pandas as pd
 
 
-connect_str="DefaultEndpointsProtocol=https;AccountName=demoexl123;AccountKey=WzRMepyKYlwQZmj7llzQUL4AooMk8tMPi4r4tKJ5FEHcYAlX1YmQhG+SuX67PpeFSpW0fe98vJ41+ASt+IEwaA==;EndpointSuffix=core.windows.net"
+connect_str='DefaultEndpointsProtocol=https;AccountName=demoexlflask;AccountKey=qwlSm7yaOCUS04PQjJpuosG+1InVQ1sgKLXZaRjDc6T/vK/m3/Tzi3soglKm5ngJJD7+2neSnO8V+AStNWbmDw==;EndpointSuffix=core.windows.net'
+
 blob_service_client = BlobServiceClient.from_connection_string(connect_str)
 container_client_in = blob_service_client.get_container_client(container= 'synth-input')
 container_client_out = blob_service_client.get_container_client(container= 'synth-output')
