@@ -3,7 +3,7 @@ import requests
 
 ###******************** ENTER USER PARAMETERS HERE**********************###
 
-files ={ 'file': open('/home/Ayush23/synthetic_project/ydata/INPUT/claims.csv','rb')}
+files ={ 'file': open('INPUT/claims.csv','rb')}
 
 samples = '200'
 primary_key = 'ClaimID'
