@@ -17,7 +17,7 @@ def gen(enc_df,samples,primary_key, anonymize_fields,num_cols, cat_cols):
     samples = int(samples)
    
     batch_size = 500
-    epochs = 10
+    epochs = 100
     learning_rate = 2e-4
     beta_1 = 0.5
     beta_2 = 0.9
