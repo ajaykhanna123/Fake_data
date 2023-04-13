@@ -24,7 +24,7 @@ def upload_file():
         df = pd.read_csv(file)
         #global orig_dtypes       
         orig_dtypes = df.dtypes.to_dict()
-        with open('TMP/orig_dtypes.pickle', 'wb') as pkl:
+        with open('orig_dtypes.pickle', 'wb') as pkl:
             pickle.dump(orig_dtypes, pkl) 
         upload_df_to_blob('real.csv', df, azure_actions.container_client_in)
         return jsonify({"upload status":"success"})
@@ -45,12 +45,12 @@ def encode_data():
     ed = Encode_decode(params,real_df,fake_df)
     #global enc_df
     enc_df = ed.encode()
-    with open('TMP/enc_df.pickle', 'wb') as pkl:
+    with open('enc_df.pickle', 'wb') as pkl:
          pickle.dump(enc_df, pkl) 
     upload_df_to_blob('enc_df.csv', enc_df, azure_actions.container_client_in)    
     #global cat_col_map
     cat_col_map = ed.handle_cat_cols()
-    with open('TMP/cat_col_map.pickle', 'wb') as pkl:
+    with open('cat_col_map.pickle', 'wb') as pkl:
          pickle.dump(cat_col_map, pkl) 
     
     return jsonify({"encode status":"success"})
@@ -82,7 +82,7 @@ def view_output():
     real_df = pd.DataFrame()
     fake_df_raw = download_blob_into_df('synth-output','fake_df_raw.csv')
     ed = Encode_decode(params,real_df,fake_df_raw)
-    with open('params_dict.pickle', 'rb') as handle:
+    with open('cat_col_map.pickle', 'rb') as handle:
          cat_col_map = pickle.load(handle)
          fake_final =ed.decode(cat_col_map)
     with open('orig_dtypes.pickle', 'rb') as handle:
