@@ -64,7 +64,7 @@ def train_model():
     anonymize_fields = request.args.get('anonymize_fields')
     num_cols =  request.args.get('num_cols')
     cat_cols =  request.args.get('cat_cols')
-    with open('TMP/enc_df.pickle', 'rb') as handle:
+    with open('enc_df.pickle', 'rb') as handle:
          enc_df = pickle.load(handle)
          enc_train_df = enc_df
          fake_df_raw = gen(enc_train_df, samples,primary_key, anonymize_fields,num_cols, cat_cols)
@@ -82,10 +82,10 @@ def view_output():
     real_df = pd.DataFrame()
     fake_df_raw = download_blob_into_df('synth-output','fake_df_raw.csv')
     ed = Encode_decode(params,real_df,fake_df_raw)
-    with open('TMP/params_dict.pickle', 'rb') as handle:
+    with open('params_dict.pickle', 'rb') as handle:
          cat_col_map = pickle.load(handle)
          fake_final =ed.decode(cat_col_map)
-    with open('TMP/orig_dtypes.pickle', 'rb') as handle:
+    with open('orig_dtypes.pickle', 'rb') as handle:
          orig_dtypes = pickle.load(handle)
          fake_final = fake_final.astype(orig_dtypes)
          upload_df_to_blob('fake_final.csv', fake_final, azure_actions.container_client_out)
