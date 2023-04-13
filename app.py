@@ -91,6 +91,9 @@ def view_output():
          upload_df_to_blob('fake_final.csv', fake_final, azure_actions.container_client_out)
     return jsonify({"decode status":"success"})
 
+@app.route('/',methods=['GET'])
+def hello():
+    return jsonify({"result":"app is deployed"})
 
 @app.route('/post_processing', methods =['POST'])
 def post_processing():
