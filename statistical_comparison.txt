@@ -52,3 +52,21 @@ H1: The two distributions are different
 KS Test Statistic : 0.11252100840336135
 Pvalue: 0.012894267781357785
 Since, the p-value is less than the specified level of significance, we can reject the null hypothesis
+Test for DiagnosisGroupCode
+H0: The two distributions are same
+H1: The two distributions are different
+Chi Square statistic: nan
+Pvalue: nan
+Since,the p-value is greater than the specified level of significance,we fail to reject the null hypothesis
+Test for Provider
+H0: The two distributions are same
+H1: The two distributions are different
+Chi Square statistic: nan
+Pvalue: nan
+Since,the p-value is greater than the specified level of significance,we fail to reject the null hypothesis
+Test for InscClaimAmtReimbursed
+H0: The two distributions are same
+H1: The two distributions are different
+KS Test Statistic : 0.11752100840336134
+Pvalue: 0.008171606165466784
+Since, the p-value is less than the specified level of significance, we can reject the null hypothesis
