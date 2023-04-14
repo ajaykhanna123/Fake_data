@@ -9,7 +9,7 @@ samples = '200'
 primary_key = 'ClaimID'
 anonymize_fields = '{"ClaimStartDt":"date"}'
 #cat_cols="['DiagnosisGroupCode','Provider', 'AttendingPhysician']"
-#num_cols="['InscClaimAmtReimbursed', 'BeneID']"
+#num_cols="['InscClaimAmtReimbursed', 'BeneID']" 
 
 #Testing
 cat_cols="['DiagnosisGroupCode','Provider']"
