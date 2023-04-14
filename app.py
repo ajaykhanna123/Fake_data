@@ -93,7 +93,7 @@ def view_output():
 
 @app.route('/',methods=['GET'])
 def hello():
-    return jsonify({"result":"app is deployed"})
+    return jsonify({"result":"app is deployed","Steps":"1.Upload file using upload_file url\n2.Encode file using encode\n3.Train model on encoded data using train_model\n4.Decode data using gen_output\n5.Generate statistical reports using post_processing url"})
 
 @app.route('/post_processing', methods =['POST'])
 def post_processing():
