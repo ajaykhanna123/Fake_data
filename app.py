@@ -13,9 +13,11 @@ from scipy.stats import ks_2samp
 import azure_actions
 from azure_actions import upload_file_to_blob,download_blob_into_df, upload_df_to_blob, upload_file_to_blob
 import pickle
+from flask_cors import CORS
 
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/upload_file', methods =['POST'])
 def upload_file():
