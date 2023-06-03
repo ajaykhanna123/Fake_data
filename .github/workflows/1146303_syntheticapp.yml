@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'syntheticapp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5E0C4988B03440969B9A05BD078B2377 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_78BD806F4E8B4E739755555E85F8FF00 }}
