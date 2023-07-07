@@ -4,14 +4,14 @@ import os
 
 class Upload_file_to_blob:
     def __init__(self):
-        self.account_name = 'demoexlflask'
+        self.account_name = '*****'
 
-        self.account_key = 'qwlSm7yaOCUS04PQjJpuosG+1InVQ1sgKLXZaRjDc6T/vK/m3/Tzi3soglKm5ngJJD7+2neSnO8V+AStNWbmDw=='
+        self.account_key = '****'
 
         self.container_name = 'filesstorage'
 
         # create a client to interact with blob storage
-        self.connect_str = 'DefaultEndpointsProtocol=https;AccountName=demoexlflask;AccountKey=qwlSm7yaOCUS04PQjJpuosG+1InVQ1sgKLXZaRjDc6T/vK/m3/Tzi3soglKm5ngJJD7+2neSnO8V+AStNWbmDw==;EndpointSuffix=core.windows.net'
+        self.connect_str = '******'
 
     def upload_file(self,filename = 'combined_df.csv',filepath = os.getcwd(),blob_folder='input_files/'):
         blob_service_client = BlobServiceClient.from_connection_string(self.connect_str)
